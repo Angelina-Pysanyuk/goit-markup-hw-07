@@ -23,6 +23,12 @@ ul {
   margin-bottom: 0;
 }
 
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
 img {
   display: block;
   max-width: 100%;
@@ -70,12 +76,6 @@ textarea {
   }
 }
 
-.list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
 .section {
   padding-top: 94px;
   padding-bottom: 94px;
@@ -94,19 +94,7 @@ textarea {
   overflow: hidden;
 }
 
-.title--primary {
-  max-width: 696px;
-  margin: 0 auto 30px;
-
-  color: var(--title-and-background-white);
-  font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-}
-
-.title--secondary {
+.section__title {
   margin-bottom: 50px;
 
   color: var(--main-title-color);
@@ -118,56 +106,54 @@ textarea {
 }
 
 .social {
-  &__list {
-    display: flex;
-    justify-content: center;
-  }
+  display: flex;
+  justify-content: center;
+}
 
-  &__item {
-    margin-right: 10px;
-  }
+.social__item {
+  margin-right: 10px;
 
-  &__item:last-child {
+  &:last-child {
     margin-right: 0;
   }
+}
 
-  &__link {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
+.social__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
 
-    color: var(--social-icons-color);
+  color: var(--social-icons-color);
 
-    transition: background-color 250ms var(--timing-function),
-      filter 250ms var(--timing-function);
-  }
+  transition: background-color 250ms var(--timing-function),
+    filter 250ms var(--timing-function);
+}
 
-  &__link:last-child {
-    margin-right: 0;
-  }
+.social__link:last-child {
+  margin-right: 0;
+}
 
-  &__link:hover &__icon,
-  &__link:focus &__icon {
-    fill: var(--title-and-background-white);
-  }
+.social__link:hover .social__icon,
+.social__link:focus .social__icon {
+  fill: var(--title-and-background-white);
+}
 
-  &__link:hover,
-  &__link:focus {
-    background-color: var(--accent-blue-color);
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-  }
+.social__link:hover,
+.social__link:focus {
+  background-color: var(--accent-blue-color);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
 
-  &__icon {
-    fill: currentColor;
+.social__icon {
+  fill: currentColor;
 
-    transition: fill 250ms var(--timing-function);
-  }
+  transition: fill 250ms var(--timing-function);
+}
 
-  &__icon:hover,
-  &__icon:focus {
-    fill: var(--title-and-background-white);
-  }
+.social__icon:hover,
+.social__icon:focus {
+  fill: var(--title-and-background-white);
 }
